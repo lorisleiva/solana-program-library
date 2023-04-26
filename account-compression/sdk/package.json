@@ -50,7 +50,8 @@
     "test:accounts": "start-server-and-test start-validator http://localhost:8899/health run-tests:accounts",
     "test:e2e": "start-server-and-test start-validator http://localhost:8899/health run-tests:e2e",
     "test:merkle-tree": "jest tests/merkleTree.test.ts --detectOpenHandles",
-    "test": "start-server-and-test start-validator http://localhost:8899/health run-tests"
+    "test": "start-server-and-test start-validator http://localhost:8899/health run-tests",
+    "test:exports": "node ./tests/cjs-export.test.cjs && node ./tests/esm-export.test.mjs"
   },
   "dependencies": {
     "@metaplex-foundation/beet": "^0.7.1",
@@ -83,6 +84,7 @@
     "jest": "^29.0.1",
     "jest-config": "^29.0.1",
     "start-server-and-test": "^1.14.0",
+    "tape": "^5.6.3",
     "ts-jest": "^28.0.8",
     "ts-jest-resolver": "^2.0.0",
     "ts-node": "^10.9.1",
